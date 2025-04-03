@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">PinPointPlace</string>
+    <string name="title_activity_stuff_list">StuffListActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_locate_stuff">Localiser mes pinpoints</string>
+    <string name="nav_handle_stuff">Gérer mes pinpoints</string>
+    <string name="nav_delete_all_stuff">Supprimer tous mes pinpoints</string>
+    <string name="nav_exit">Quitter</string>
+    <string name="nav_handle_category">Gestion des catégories</string>
+
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>Localiser mes pinpoints</item>
+        <item>Gérer mes pinpoints</item>
+        <item>Supprimer tous mes pinpoints</item>
+        <item>Quitter</item>
+        <item>Gestion des catégories</item>
+    </string-array>
+
+    <string name="facebook_app_id">246778472399026</string>
+    <string name="title_activity_facebook">Facebook</string>
+    <string name="action_settings">Settings</string>
+</resources>

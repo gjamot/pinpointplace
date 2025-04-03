@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_drag"
+        android:title="drag"
+        android:icon="@drawable/ic_action_drag_menu"
+        app:showAsAction="collapseActionView|always"
+        android:layout_width="wrap_content">
+        <!-- "file" submenu -->
+        <menu>
+            <item
+                android:id="@+id/action_share"
+                android:icon="@drawable/ic_action_share"
+                android:title="Partager"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/action_locate"
+                android:icon="@drawable/ic_update_location"
+                android:title="Localiser"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/action_update"
+                android:icon="@drawable/ic_category_handling"
+                android:title="Modifier"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/action_delete"
+                android:icon="@drawable/ic_action_delete_all_stuff"
+                android:title="Supprimer"
+                app:showAsAction="ifRoom" />
+        </menu>
+    </item>
+</menu>
