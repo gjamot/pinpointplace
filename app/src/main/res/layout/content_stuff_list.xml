@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_stuff_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.findmystuff.pinpointplace.view.StuffListActivity"
+    tools:showIn="@layout/activity_stuff_list">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/filter_bar_id"
+        android:paddingLeft="10dp"
+        android:background="@color/PrimaryColor">
+
+        <Spinner
+            android:id="@+id/spinner_stuff_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textSize="14dp"
+            android:layout_centerVertical="true"/>
+
+        <ImageButton
+            android:id="@+id/btn_reset_category_filters"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_reset_filter"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dip">
+        </ImageButton>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/filter_date_id"
+        android:layout_below="@id/filter_bar_id"
+        android:paddingLeft="18dp"
+        android:background="@color/PrimaryColor">
+
+        <TextView
+            android:id="@+id/txtFilterDate"
+            android:text="Filtrer par date      "
+            android:textSize="17dp"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="32dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/btn_date_filter"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_date_picker"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:onClick="showDatePickerDialog"
+            android:layout_marginRight="9dip"/>
+
+        <ImageButton
+            android:id="@+id/btn_reset_date_filters"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_reset_filter"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="5dip">
+        </ImageButton>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linlaHeaderProgress"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_below="@id/filter_bar_id"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/pbHeaderProgress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </ProgressBar>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listView"
+        android:layout_below="@id/filter_date_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"/>
+    <TextView
+        android:id="@+id/infoMessageList"
+        android:layout_below="@id/filter_date_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/PrimaryColor"
+        android:gravity="center"
+        android:textSize="24dp"
+        android:visibility="invisible"
+        android:text="Cliquer sur le bouton + pour ajouter un pinpoint"/>
+
+    <ImageView
+        android:id="@+id/expanded_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/app_bar_update"
+        android:id="@+id/toolbar_id"
+        android:layout_width="match_parent"
+        android:layout_height="82dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_icon"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:paddingTop="30dp"
+                android:padding="1dp"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:text="Nom"
+                android:paddingTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/name_title"
+                android:layout_below="@+id/img_icon"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:textColor="@android:color/black"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:paddingTop="10dp"
+                android:textSize="14dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/viewStuffName"
+                android:layout_below="@+id/name_title"
+                android:padding="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:paddingTop="20dp"
+                android:text="Type"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_below="@+id/viewStuffName"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/type_label"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="16dp"/>
+            <TextView
+                android:id="@+id/stuff_type"
+                android:paddingTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:padding="5dp"
+                android:textSize="14dp"
+                android:layout_centerVertical="true"
+                android:paddingBottom="20dp"
+                android:layout_below="@+id/type_label"/>
+
+            <TextView
+                android:text="Informations complémentaires"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_below="@+id/editStuffName"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/description_label"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:paddingBottom="10dp"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/stuff_description"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:gravity="top"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
