@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Général">
+        <menu>
+            <item
+                android:id="@+id/nav_handle_stuff"
+                android:icon="@drawable/ic_action_list_stuff"
+                android:title="@string/nav_locate_stuff" />
+
+            <item
+                android:id="@+id/nav_delete_all_stuff"
+                android:icon="@drawable/ic_action_delete_all_stuff"
+                android:title="@string/nav_delete_all_stuff" />
+
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/ic_exit_app"
+                android:title="@string/nav_exit" />
+        </menu>
+    </item>
+
+    <item android:title="Paramètres">
+        <menu>
+            <item
+                android:id="@+id/nav_handle_category"
+                android:icon="@drawable/ic_category_handling"
+                android:title="@string/nav_handle_category" />
+            <!--
+            <item
+                android:id="@+id/nav_custom_ihm"
+                android:icon="@drawable/ic_interface_customize"
+                android:title="@string/nav_customize_ihm" />
+                -->
+        </menu>
+    </item>
+    <!--
+    <item android:title="Social">
+            <menu>
+                    <item
+                        android:id="@+id/nav_share_mylocation"
+                        android:icon="@drawable/ic_action_share"
+                        android:title="@string/nav_share_mylocation" />
+            </menu>
+    </item>
+    -->
+</menu>

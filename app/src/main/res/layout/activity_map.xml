@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_stuff_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.findmystuff.pinpointplace.view.ShowStuffActivity"
+    tools:showIn="@layout/map_layout_container">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/filter_bar_id"
+        android:paddingLeft="10dp"
+        android:background="@color/PrimaryColor">
+
+        <Spinner
+            android:id="@+id/spinner_stuff_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textSize="14dp"
+            android:layout_centerVertical="true"/>
+
+        <ImageButton
+            android:id="@+id/btn_reset_category_filters"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_reset_filter"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dip">
+        </ImageButton>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/filter_date_id"
+        android:layout_below="@id/filter_bar_id"
+        android:paddingLeft="18dp"
+
+        android:background="@color/PrimaryColor">
+
+        <TextView
+            android:id="@+id/txtFilterDate"
+            android:text="Filtrer par date      "
+            android:textSize="17dp"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="32dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/btn_date_filter"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_date_picker"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:onClick="showDatePickerDialog"
+            android:layout_marginRight="9dip"/>
+
+        <ImageButton
+            android:id="@+id/btn_reset_date_filters"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_reset_filter"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="5dip">
+        </ImageButton>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/map_layout"
+        android:layout_below="@id/filter_date_id">
+        <fragment
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.google.android.gms.maps.MapFragment"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_group"
+        android:background="@color/PrimaryColor"
+        android:gravity="center"
+        android:paddingBottom="18dp"
+        android:layout_below="@id/map_layout"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_view"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_action_view"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_toLeftOf="@+id/btn_share"
+            android:layout_marginRight="5dip">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/btn_share"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_action_share"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="5dip">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/btn_locate_stuff"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_action_stuff_map"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="5dip">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/btn_update"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_category_handling"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="5dip">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_action_delete_all_stuff"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+        </ImageButton>
+    </LinearLayout>
+
+</RelativeLayout>
